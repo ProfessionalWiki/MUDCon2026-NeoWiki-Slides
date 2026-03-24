@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@6.0.0/dist/reveal.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@6.0.0/dist/theme/black.css" id="theme">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@6.0.0/dist/plugin/highlight/monokai.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 	<style>
 		:root {
 			--pw-blue: #32739b;
@@ -126,6 +127,17 @@
 			text-align: left;
 		}
 		.reveal .institution-list li { margin-bottom: 0.15em; }
+		.reveal .bs-bullets li::before {
+			content: "";
+			background: url('bluespice-icon.webp') no-repeat center center;
+			background-size: contain;
+			width: 0.8em;
+			height: 0.8em;
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			top: 0.25em;
+		}
 		.reveal .demo-slide {
 			background: radial-gradient(ellipse at center, rgba(50,115,155,0.15) 0%, transparent 70%);
 		}
@@ -144,6 +156,16 @@
 		#pw-logo-overlay img {
 			height: 26px;
 		}
+		#echolot-logo-overlay {
+			position: fixed;
+			bottom: 12px;
+			left: 16px;
+			z-index: 100;
+			opacity: 0.55;
+		}
+		#echolot-logo-overlay img {
+			height: 26px;
+		}
 		/* Title slide layout */
 		.reveal .title-meta {
 			display: flex;
@@ -160,6 +182,7 @@
 </head>
 <body>
 	<div id="pw-logo-overlay"><img src="pw-logo.svg" alt="Professional Wiki"></div>
+	<div id="echolot-logo-overlay" style="display: none;"><img src="echolot-logo.svg" alt="ECHOLOT"></div>
 	<div class="reveal">
 		<div class="slides">
 
@@ -210,17 +233,30 @@
 			<!-- ==================== NEOWIKI INTRO ==================== -->
 			<section>
 				<h2>NeoWiki</h2>
-				<p style="font-size: 0.9em;">Open-source MediaWiki extension for structured data</p>
+				<p style="font-size: 0.9em;">Open-source MediaWiki structured data extension</p>
 				<ul>
-					<li><strong>10x better usability</strong> than SMW</li>
-					<li class="fragment"><strong>10x better sustainability</strong> via modern architecture</li>
-					<li class="fragment"><strong>10% of features</strong> that deliver <strong>90% of the value</strong></li>
-					<li class="fragment">Not aiming for feature parity</li>
+					<div class="fragment">
+						<li><strong>10x better usability</strong> than SMW</li>
+						<li><strong>10x better sustainability</strong> via modern architecture</li>
+					</div>
+					<div class="fragment">
+						<li>Not aiming for feature parity</li>
+						<li><strong>10% of features</strong> that deliver <strong>90% of the value</strong></li>
+					</div>
 				</ul>
 
 				<aside class="notes">
 					<p>
+						Introducing NeoWiki, a modern open-source extension for structured data.
+					</p>
 
+					<p>
+						You get radically better usability, while we achieve step-change improvements in sustainability.
+					</p>
+
+					<p>
+						We are not aiming for feature parity with prior solutions. Instead, we focus on the most common and
+						valuable use cases, giving you a polished experience without feature bloat.
 					</p>
 				</aside>
 			</section>
@@ -240,7 +276,7 @@
 				</div>
 				<aside class="notes">
 					<p>
-						We're building NeoWiki at Professional Wiki and have invested heavily in it ourselves.
+						NeoWiki is developed by Professional Wiki and have invested heavily in it ourselves.
 					</p>
 					<p>
 						NeoWiki is also backed by ECHOLOT, an EU cultural heritage consortium. More on that later
@@ -285,7 +321,7 @@
 
 			<!-- ==================== BERNHARD: ECHOLOT SECTION ==================== -->
 			<section data-bernhard>
-				<h2 class="echolot-header">ECHOLOT</h2>
+				<img src="echolot-logo-text.svg" alt="ECHOLOT" style="height: 60px; margin-bottom: 0.3em;">
 				<p style="font-size: 0.7em;">
 					<span style="color: #5b8def;">E</span>uropean
 					<span style="color: #5b8def;">C</span>ultural
@@ -324,7 +360,7 @@
 						</ul>
 						<p class="fragment" style="margin-top: 0.8em;">Focus: <strong>addressing limitations</strong> for cultural heritage, especially structured data and access rights.</p>
 					</div>
-					<div>
+					<div class="fragment">
 						<p>Hybrid curation workflows:</p>
 						<ul>
 							<li>Import, export &amp; transformation</li>
@@ -380,10 +416,6 @@
 						<li>University of Alicante (ES)</li>
 					</ul>
 				</div>
-				<p style="font-size: 0.5em; color: #888; margin-top: 0.8em;">
-					Plus 15 consortium partners across 11 countries, including Professional Wiki and Knowledge Management Associates
-				</p>
-
 				<aside class="notes">
 					<p>
 						Bernhard: Brief overview of case studies and participating
@@ -392,7 +424,112 @@
 				</aside>
 			</section>
 
+			<section data-bernhard>
+				<h2 class="echolot-header">Consortium Partners</h2>
+				<p style="font-size: 0.55em; color: #aaa; margin-bottom: 0.5em;">15 partners across 11 countries</p>
+				<div style="display: flex; gap: 1.5em; justify-content: center; font-size: 0.55em;">
+					<ul style="list-style: none; padding: 0; margin: 0;">
+						<li><strong>Professional Wiki GmbH (DE)</strong></li>
+						<li><strong>Knowledge Management Associates (AT)</strong></li>
+						<li><strong>TIB (DE)</strong> <span style="color: #888;">— Coordinator</span></li>
+						<li>Europeana Foundation (NL)</li>
+						<li>DARIAH-EU (FR)</li>
+					</ul>
+					<ul style="list-style: none; padding: 0; margin: 0;">
+						<li>Austrian Academy of Sciences (AT)</li>
+						<li>Czech Academy of Sciences (CZ)</li>
+						<li>Polish Academy of Sciences (PL)</li>
+						<li>Jozef Stefan Institute (SI)</li>
+						<li>University of the Basque Country (ES)</li>
+					</ul>
+					<ul style="list-style: none; padding: 0; margin: 0;">
+						<li>University of Helsinki (FI)</li>
+						<li>PCSS (PL)</li>
+						<li>meemoo (BE)</li>
+						<li>Australo (EE)</li>
+						<li>takin.solutions (BG)</li>
+					</ul>
+				</div>
+				<h2 style="margin-top: 0.8em;">Follow ECHOLOT</h2>
+				<p style="font-size: 0.6em;">
+					<a href="https://echolot-eccch.eu/" style="color: #ccc;">echolot-eccch.eu</a>
+				</p>
+				<p style="font-size: 0.6em;">
+					<a href="https://www.linkedin.com/company/echolot-project/" style="color: #5b8def;"><i class="fab fa-linkedin"></i></a>
+					<a href="https://www.linkedin.com/company/echolot-project/" style="color: #ccc;"> ECHOLOT Project</a>
+					<span style="display: inline-block; width: 1em;"></span>
+					<a href="https://mastodon.social/@ECHOLOT_Project" style="color: #5b8def;"><i class="fab fa-mastodon"></i></a>
+					<a href="https://mastodon.social/@ECHOLOT_Project" style="color: #ccc;"> @ECHOLOT_Project</a>
+					<span style="display: inline-block; width: 1em;"></span>
+					<a href="https://www.youtube.com/@ECHOLOTProject" style="color: #5b8def;"><i class="fab fa-youtube"></i></a>
+					<a href="https://www.youtube.com/@ECHOLOTProject" style="color: #ccc;"> @ECHOLOTProject</a>
+				</p>
+
+				<aside class="notes">
+					<p>
+						Bernhard: Highlight breadth of consortium. PW and KM-A bolded.
+					</p>
+				</aside>
+			</section>
+
 			<!-- ==================== JEROEN: WRAP-UP ==================== -->
+			<section>
+				<h2>NeoWiki for <img src="bluespice-logo.png" alt="BlueSpice" style="height: 1.6em; vertical-align: middle; margin-left: 0.1em; margin-bottom: 0.15em;"></h2>
+				<ul class="bs-bullets" style="margin-top: 1.2em;">
+					<li>NeoWiki powers BlueSpice Galaxy</li>
+					<li class="fragment">Hallo Welt funded NeoWiki</li>
+					<li class="fragment">Active collaboration</li>
+				</ul>
+
+				<aside class="notes">
+					<p>
+						NeoWiki will power the next major version of BlueSpice.
+						BlueSpice is the leading enterprise MediaWiki distribution, developed by our partner Hallo Welt.
+					</p>
+					<p>
+						Migrating an enterprise solution as comprehensive as BlueSpice away from SMW is no small task.
+						That's why Hallo Welt has invested in NeoWiki. We're now together building the next generation of
+						structured data support for enterprise wikis.
+					</p>
+					<p>
+						If you also want a say in the development direction of NeoWiki,
+						so you can ensure it accommodates your use cases,
+						now is the time to reach out to us.
+					</p>
+				</aside>
+			</section>
+
+			<section>
+				<h2>NeoWiki Product Vision</h2>
+				<ul>
+					<li>
+						<strong>10x Improvement</strong><br>
+						<span style="font-size: 0.75em; color: #aaa;">Radically better UX and sustainability</span>
+					</li>
+					<li class="fragment">
+						<strong>Coherent product</strong><br>
+						<span style="font-size: 0.75em; color: #aaa;">Professional Wiki is product owner</span>
+					</li>
+					<li class="fragment">
+						<strong>Open source</strong><br>
+						<span style="font-size: 0.75em; color: #aaa;">Build your own extensions on top</span>
+					</li>
+					<li class="fragment">
+						<strong>Designed for AI</strong><br>
+						<span style="font-size: 0.75em; color: #aaa;">APIs, well-documented formats, built-in AI capabilities</span>
+					</li>
+				</ul>
+
+				<aside class="notes">
+					<p>
+						Professional Wiki is product owner. We ensure the product stays coherent and that the use cases of our partners are solved well.
+					</p>
+
+					<p>
+						NeoWiki is Open Source and already on GitHub. Website launcing soon. Many docs. Extension points for your extensions.
+					</p>
+				</aside>
+			</section>
 
 			<!-- ==================== COMPARISON SLIDES ==================== -->
 			<section>
@@ -482,9 +619,12 @@
 			center: false,
 			plugins: [ RevealNotes, RevealHighlight ],
 		}).then(() => {
-			const logo = document.getElementById('pw-logo-overlay');
+			const pwLogo = document.getElementById('pw-logo-overlay');
+			const echolotLogo = document.getElementById('echolot-logo-overlay');
 			Reveal.on('slidechanged', event => {
-				logo.style.display = event.currentSlide.hasAttribute('data-bernhard') ? 'none' : '';
+				const isBernhard = event.currentSlide.hasAttribute('data-bernhard');
+				pwLogo.style.display = isBernhard ? 'none' : '';
+				echolotLogo.style.display = isBernhard ? '' : 'none';
 			});
 		});
 	</script>
