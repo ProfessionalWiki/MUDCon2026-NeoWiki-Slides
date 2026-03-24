@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@6.0.0/dist/reveal.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@6.0.0/dist/theme/black.css" id="theme">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@6.0.0/dist/plugin/highlight/monokai.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 	<style>
 		:root {
 			--pw-blue: #32739b;
@@ -299,22 +299,22 @@
 					<p>3. Infobox/view rendering</p>
 					<p>4. Multiple subjects per page</p>
 					<p>5. Cypher query (if ready)</p>
-					<p>Weave in comparisons:</p>
+					<p>Comparison one-liners to weave in during demo:</p>
 					<p>
-						Schemas: In SMW you'd define this with a property page and hope
-						people use the right type. Here the schema enforces it.
+						Schemas: The schema enforces types automatically. No more
+						hoping editors get it right.
 					</p>
 					<p>
-						Views/queries: This is roughly what #ask does, except the query
-						is Cypher and the result format is a first-class UI component.
+						Forms: Built-in, derived from the schema. Not a separate
+						extension you bolt on.
 					</p>
 					<p>
-						JSON storage: Like Wikibase, data is stored as JSON in revision
-						slots, not in a custom SQL schema.
+						Views/queries: Think #ask, but with a real query language
+						and first-class result components.
 					</p>
 					<p>
-						Forms: Wikibase has forms but no schemas or constraints. SMW has
-						PageForms as a separate bolt-on. Here it's native.
+						Storage: JSON in revision slots. Versionable, standard,
+						no rebuilds.
 					</p>
 				</aside>
 			</section>
@@ -578,22 +578,45 @@
 
 			<section>
 				<h2>Get Involved</h2>
-				<div class="cta-links">
-					<p><strong>Try it:</strong> <a href="https://neowiki.dev">neowiki.dev</a></p>
-					<p><strong>Code:</strong> <a href="https://github.com/ProfessionalWiki/NeoWiki">github.com/ProfessionalWiki/NeoWiki</a></p>
-					<p><strong>Follow:</strong>
-						<a href="https://mastodon.social/@NeoWiki">Mastodon</a> &middot;
-						<a href="https://bsky.app/profile/neowiki.bsky.social">Bluesky</a> &middot;
-						<a href="https://x.com/NeoWikiAI">X/Twitter</a>
+				<div style="font-size: 0.8em; text-align: left; max-width: 550px; margin: 0 auto;">
+					<p>
+						<i class="fas fa-globe" style="color: var(--pw-light); width: 1.5em;"></i>
+						<a href="https://neowiki.dev" style="color: #ccc;">neowiki.dev (demo wiki)</a>
+					</p>
+					<p>
+						<i class="fab fa-github" style="color: var(--pw-light); width: 1.5em;"></i>
+						<a href="https://github.com/ProfessionalWiki/NeoWiki" style="color: #ccc;">github.com/ProfessionalWiki/NeoWiki</a>
+					</p>
+					<p>
+						<i class="fab fa-mastodon" style="color: var(--pw-light); width: 1.5em;"></i>
+						<a href="https://mastodon.social/@NeoWiki" style="color: #ccc;">@NeoWiki</a>
+					</p>
+					<p>
+						<i class="fab fa-bluesky" style="color: var(--pw-light); width: 1.5em;"></i>
+						<a href="https://bsky.app/profile/neowiki.bsky.social" style="color: #ccc;">@neowiki.bsky.social</a>
+					</p>
+					<p>
+						<i class="fab fa-x-twitter" style="color: var(--pw-light); width: 1.5em;"></i>
+						<a href="https://x.com/NeoWikiAI" style="color: #ccc;">@NeoWikiAI</a>
 					</p>
 				</div>
-				<div class="highlight-box" style="text-align: center; max-width: 550px; margin: 1em auto;">
-					We want <strong>feedback</strong>, <strong>testers</strong>, and <strong>funders</strong>.<br>
-					If NeoWiki fits your use case, talk to us.
+				<div style="font-size: 0.6em; margin-top: 2.5em; color: #888;">
+					<p style="color: #aaa; margin-bottom: 0.3em;">Professional Wiki</p>
+					<a href="https://professional.wiki" style="color: #aaa;">professional.wiki</a>
+					<span style="display: inline-block; width: 0.8em;"></span>
+					<a href="https://www.linkedin.com/company/professional-wiki/" style="color: #aaa;"><i class="fab fa-linkedin" style="color: var(--pw-light);"></i> Professional Wiki</a>
+					<span style="display: inline-block; width: 0.8em;"></span>
+					<a href="https://mastodon.social/@ProWiki" style="color: #aaa;"><i class="fab fa-mastodon" style="color: var(--pw-light);"></i> @ProWiki</a>
+					<span style="display: inline-block; width: 0.8em;"></span>
+					<a href="https://x.com/ProWikis" style="color: #aaa;"><i class="fab fa-x-twitter" style="color: var(--pw-light);"></i> @ProWikis</a>
 				</div>
 
 				<aside class="notes">
-					<p>Pause. Let people absorb links. Then open Q&amp;A.</p>
+					<p>
+						Try the demo at neowiki.dev. Follow our progress. And if you
+						have structured data needs on MediaWiki, come talk to us after
+						the session.
+					</p>
 				</aside>
 			</section>
 
