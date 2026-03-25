@@ -81,6 +81,9 @@
 		.reveal {
 			font-family: var(--slide-font);
 		}
+		.reveal .slides section {
+			padding-bottom: 40px;
+		}
 
 		/* ── Typography ── */
 		.reveal h1, .reveal h2, .reveal h3 {
@@ -253,14 +256,13 @@
 			<section>
 				<div class="flex gap-8 items-center text-left">
 					<div class="flex-1">
-						<h2 class="text-7xl font-extrabold mb-4">Time for Something New</h2>
-						<p class="text-2xl text-[color:var(--slide-accent)] font-medium">20 years of lessons. A fresh start.</p>
+						<h2 class="text-7xl font-extrabold">Time for Something New</h2>
 					</div>
 					<div class="flex-1">
 						<ul>
 							<li>SMW is powerful and unique<span class="fragment">, has issues</span></li>
 							<li class="fragment">Usability of Notion, Airtable, etc</li>
-							<li class="fragment">SMW 20 years old, Wikibase almost 15</li>
+							<li class="fragment">SMW 20 years old, Wikibase ~15</li>
 							<li class="fragment">Many lessons learned</li>
 						</ul>
 					</div>
@@ -303,7 +305,7 @@
 					</div>
 					<div class="fragment col-span-2 bg-linear-to-br from-bento-dark to-bento-dark-light border border-bento-dark-border rounded-[8px] px-[40px] py-[32px]">
 						<div class="text-[11px] text-bento-dark-text uppercase tracking-widest">Philosophy</div>
-						<div class="text-[24px] font-bold text-white mt-[8px]">10% of features, 90% of the value</div>
+						<div class="text-[24px] font-bold text-white mt-[8px]">Focus on value, not features</div>
 					</div>
 				</div>
 
@@ -317,32 +319,25 @@
 					</p>
 
 					<p>
-						We are not aiming for feature parity with prior solutions. Instead, we focus on the most common and
-						valuable use cases, giving you a polished experience without feature bloat.
+						We are explicitly not aiming for feature parity with prior solutions.
+						You can get 90% of the value from 10% of the features.
+						Thus, we focus on the most common and valuable use cases, giving you a polished and focused experienced.
 					</p>
 				</aside>
 			</section>
 
 			<!-- ==================== SOCIAL PROOF TEASER ==================== -->
-			<section>
-				<p class="text-lg text-[color:var(--slide-muted)] mb-1">Developed by</p>
-				<h2 class="text-5xl font-bold mb-8">Professional Wiki</h2>
-				<div class="fragment" style="text-align: center;">
-					<p class="text-base text-[color:var(--slide-muted)] mb-3">Backed by</p>
-					<div class="flex justify-center items-center gap-[40px]">
-						<div class="text-center">
-							<img src="echolot-logo-text.svg" alt="ECHOLOT" class="h-[32px] mx-auto">
-							<div class="text-[12px] text-[color:var(--slide-muted)] mt-2">EU Cultural Heritage Consortium</div>
-						</div>
-					</div>
+			<section style="padding-bottom: 100px;">
+				<p class="text-2xl text-[color:var(--slide-muted)]">Developed by</p>
+				<div class="text-4xl font-bold text-[color:var(--slide-heading)] mt-2" style="margin-bottom: 3rem;">Professional Wiki</div>
+				<div class="fragment text-center">
+					<p class="text-2xl text-[color:var(--slide-muted)] mb-4">Backed by</p>
+					<div class="text-4xl font-bold text-[color:var(--slide-heading)]">ECHOLOT</div>
+					<div class="text-sm text-[color:var(--slide-muted)] mt-1">EU Cultural Heritage Consortium</div>
 				</div>
-				<div class="fragment" style="text-align: center; margin-top: 1.5em;">
-					<div class="flex justify-center items-center gap-[40px]">
-						<div class="text-center">
-							<div class="text-[28px] font-bold text-[color:var(--slide-heading)]">Hallo Welt!</div>
-							<div class="text-[12px] text-[color:var(--slide-muted)] mt-2">Creators of BlueSpice</div>
-						</div>
-					</div>
+				<div class="fragment text-center mt-8">
+					<div class="text-4xl font-bold text-[color:var(--slide-heading)]">Hallo Welt!</div>
+					<div class="text-sm text-[color:var(--slide-muted)] mt-1">Creators of BlueSpice</div>
 				</div>
 				<aside class="notes">
 					<p>
